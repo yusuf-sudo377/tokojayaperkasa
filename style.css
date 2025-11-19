@@ -1,0 +1,79 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("pp.webp");
+}
+
+header {
+    background-color: #e57dff;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 1.5em;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+.produk-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.produk {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    width: 200px;
+}
+
+.produk img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #1e3d59;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #16324f;
+}
+
+#checkoutBtn {
+    margin-top: 15px;
+    background-color: #28a745;
+}
+
+#checkoutBtn:hover {
+    background-color: #218838;
+}
+
+footer {
+    background-color: #1e3d59;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

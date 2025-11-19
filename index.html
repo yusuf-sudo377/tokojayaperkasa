@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Jaya Perkasa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Toko Jaya Perkasa</h1>
+        <nav>
+            <a href="#tentang">Tentang</a>
+            <a href="#produk">Produk</a>
+            <a href="#keranjang">Keranjang</a>
+            <a href="#kontak">Kontak</a>
+        </nav>
+    </header>
+
+    <section id="tentang">
+        <h2>Tentang Kami</h2>
+        <p>
+            <strong>Toko Jaya Perkasa</strong> 
+            Selamat datang!
+            Di sini, semua rasa punya cerita. Kami hadir untuk membawa kamu menjelajahi kelezatan jajanan khas Indonesia — dari yang tradisional sampai yang kekinian.
+        </p>
+    </section>
+
+    <section id="produk">
+        <h2>Produk Kami</h2>
+        <div class="produk-list">
+
+            <div class="produk">
+                <img src="lbrn.jpg" alt="Roti Lebaran">
+                <h3>Roti Lebaran</h3>
+                <p>Rp 60.000 / toples</p>
+                <button onclick="tambahKeranjang('Cat Tembok 5L')">Tambah ke Keranjang</button>
+            </div>
+
+            <div class="produk">
+                <img src="uwh.jpg" alt="Wedang uwuh">
+                <h3>Wedang uwuh</h3>
+                <p>Rp 4.500</p>
+                <button onclick="tambahKeranjang('Semen 50kg')">Tambah ke Keranjang</button>
+            </div>
+
+            <div class="produk">
+                <img src="jjn.jpg" alt="aneka cemilan">
+                <h3>Aneka cemilan</h3>
+                <p>Rp 5.000</p>
+                <button onclick="tambahKeranjang('aneka cemilan')">Tambah ke Keranjang</button>
+            </div>
+
+            <div class="produk">
+                <img src="krpk.jpg" alt="kerupuk pedas">
+                <h3>krupuk pedas</h3>
+                <p>Rp 8.000 / 5ons</p>
+                <button onclick="tambahKeranjang('aneka ciki')">Tambah ke Keranjang</button>
+            </div>
+
+           <div class="produk">
+                <img src="mrh.jpg" alt="Gula">
+                <h3>Gula</h3>
+                <p>Rp 25.000 / 1kg</p>
+                <button onclick="tambahKeranjang('Gula')">Tambah ke Keranjang</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="keranjang">
+        <h2>Keranjang Belanja</h2>
+        <ul id="daftarKeranjang"></ul>
+        <button id="checkoutBtn" onclick="checkout()">Checkout via WhatsApp</button>
+    </section>
+
+    <section id="kontak">
+        <h2>Kontak Kami</h2>
+        <p>Alamat: Jl.Greges Donotirto No. 55772, Kretek,Bantul</p>
+        <p>Telepon: <a href="tel:+6287738883008">+6287738883008</a></p>
+        <p>WhatsApp: <a href="https://wa.me/+6287738883008" target="_blank">Chat via WhatsApp</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Toko Jaya Perkasa | Semua Hak Dilindungi</p>
+    </footer>
+    <!-- Tombol WhatsApp Melayang -->
+<a href="https://wa.me/+6287738883008" 
+   class="wa-float" 
+   target="_blank" 
+   aria-label="Chat via WhatsApp">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+        alt="WhatsApp" class="wa-icon">
+</a>
+
+<style>
+/* Tombol WhatsApp Melayang */
+.wa-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+.wa-float:hover {
+  background-color: #20ba5a;
+}
+
+.wa-icon {
+  width: 35px;
+  height: 35px;
+  margin-top: 12px;
+}
+</style>
+    <script src="script.js"></script>
+</body>
+</html>

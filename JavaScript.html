@@ -1,0 +1,46 @@
+let keranjang = [];
+
+function tambahKeranjang(namaProduk) {
+    keranjang.push(namaProduk);
+    tampilkanKeranjang();
+    alert(`${namaProduk} telah ditambahkan ke keranjang!`);
+}
+
+function tampilkanKeranjang() {
+    const daftar = document.getElementById('daftarKeranjang');
+    daftar.innerHTML = "";
+
+    if (keranjang.length === 0) {
+        daftar.innerHTML = "<li>Keranjang masih kosong</li>";
+        return;
+    }
+
+    keranjang.forEach((item, index) => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        const hapusBtn = document.createElement('button');
+        hapusBtn.textContent = "Hapus";
+        hapusBtn.onclick = () => hapusItem(index);
+        li.appendChild(hapusBtn);
+        daftar.appendChild(li);
+    });
+}
+
+function hapusItem(index) {
+    keranjang.splice(index, 1);
+    tampilkanKeranjang();
+}
+
+function checkout() {
+    if (keranjang.length === 0) {
+        alert("Keranjang masih kosong!");
+        return;
+    }
+
+    const nomorWA = "+6287738883008"; // ganti dengan nomor toko kamu
+    const pesan = encodeURIComponent(
+        `Halo, saya ingin memesan barang berikut dari Toko Jaya Perkasa:\n\n` +
+        keranjang.map((item, i) => `${i + 1}. ${item}`).join("\n")
+    );
+    window.open(`https://wa.me/${nomorWA}?text=${pesan}`, "_blank");
+}
